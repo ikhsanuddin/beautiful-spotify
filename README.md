@@ -1,8 +1,7 @@
 # Beautiful Themed Spootify 
-<div style="display: flex;">
-<img alt="screenshot-desktop" height=395 src="https://puu.sh/GwPLE/3be580156a.png" />
-<img alt="screenshot-mobile" height=400 src="https://puu.sh/GwPLS/0bcb566d23.png" />
-</div>
+Desktop                                                                                |  Mobile
+:-------------------------------------------------------------------------------------:|:-----------------------------:
+<img alt="screenshot-desktop" height=315 src="public/desktop-screenshoot.png" />  |  <img alt="screenshot-mobile" height=320 src="public/mobile-screenshoot.png" />
 &nbsp;
 
 ## Highlight ✨
