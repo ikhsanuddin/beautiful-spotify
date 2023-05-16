@@ -1,7 +1,7 @@
 @import "@/styles/vars";
 
 .header {
-  height: 300px;
+    height: auto;
   background: $secondary-orange;
   overflow: hidden;
   display: flex;
@@ -10,36 +10,29 @@
   letter-spacing: 1px;
   font-weight: 300;
   justify-content: space-between;
-  padding-right: 5%;
-  min-height: 300px;
-  margin-bottom: 50px;
+  min-height: 150px;
   user-select: none;
-
-  @media only screen and (max-height: 775px) {
-    height: 100px;
-    min-height: 100px;
-    margin-bottom: 30px;
-  }
-
-  @media only screen and (max-width: 750px) {
-    margin-bottom: 20px;
-  }
-
-  @media only screen and (max-width: 1300px) {
-    padding-left: 5%;
-    padding-right: unset;
-  }
+  position: relative;
+  margin-bottom: 20px;
+  padding-right: unset;
 
   @media only screen and (min-width: 415px) and (max-width: 600px) {
     padding: 20px !important;
-    height: 100px;
-    min-height: 100px;
   }
 
-  @media only screen and (max-width: 415px) {
-    padding: 20px !important;
-    height: auto;
-    min-height: 100px;
+  @media only screen and (max-height: 775px) {
+    min-height: 150px;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    padding-left: 5%;
+  }
+
+  @media only screen and (min-width: 1300px) {
+    margin-bottom: 50px;
+    height: 300px;
+    padding-right: 5%;
   }
 
   > div {
@@ -134,4 +127,19 @@
       display: none;
     }
   }
+}
+
+.header-subtitle {
+  display: none;
+
+  @media only screen and (min-width: 1800px) {
+    display: block;
+  }
+}
+
+.spotify-power {
+  position: relative;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
 }

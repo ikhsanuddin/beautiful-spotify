@@ -1,24 +1,24 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import DiscoverItem from "./DiscoverItem";
-import styles from "../styles/_discover-block.module.scss";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+} from "@fortawesome/free-solid-svg-icons"
+import DiscoverItem from "./DiscoverItem"
+import styles from "../styles/_discover-block.module.scss"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 
 function scrollContainer(id: string, option: { isNegative?: boolean } = {}) {
   return () => {
-    const scrollableContainer = document.getElementById(id);
+    const scrollableContainer = document.getElementById(id)
     if (scrollableContainer) {
       const amount = option.isNegative
         ? -scrollableContainer?.offsetWidth
-        : scrollableContainer?.offsetWidth;
+        : scrollableContainer?.offsetWidth
 
-      scrollableContainer.scrollLeft = scrollableContainer.scrollLeft + amount;
+      scrollableContainer.scrollLeft = scrollableContainer.scrollLeft + amount
     }
-  };
+  }
 }
 
 export default function DiscoverBlock({
@@ -27,10 +27,10 @@ export default function DiscoverBlock({
   data,
   imagesKey = "images",
 }: {
-  text: string;
-  id: string;
-  data: any;
-  imagesKey?: string;
+  text: string
+  id: string
+  data: any
+  imagesKey?: string
 }) {
   return (
     <div className={styles["discover-block"]}>
@@ -53,10 +53,28 @@ export default function DiscoverBlock({
         ) : null}
       </div>
       <div className={styles["discover-block__row"]} id={id}>
-        {data.map(({ [imagesKey]: images, name }: any) => (
-          <DiscoverItem key={name} images={images} name={name} />
+        {data.map(({ [imagesKey]: images, name, owner, artists, external_urls }: any) => (
+          <>
+            {artists ? (
+              <DiscoverItem
+                key={name}
+                images={images}
+                name={name}
+                owner={artists[0]}
+                external_urls={external_urls}
+              />
+            ) : (
+              <DiscoverItem
+                key={name}
+                images={images}
+                name={name}
+                owner={owner}
+                external_urls={external_urls || { spotify: '#'}}
+              />
+            )}
+          </>
         ))}
       </div>
     </div>
-  );
+  )
 }

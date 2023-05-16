@@ -1,7 +1,7 @@
 import { InferGetServerSidePropsType } from "next";
 import Image from "next/image";
 import { ClientSafeProvider, getProviders, signIn } from "next-auth/react";
-import logoSpotify from "@/assets/images/spotify.png";
+import logoSpotify from "@/assets/images/Spotify_Logo_RGB_Green.png"
 
 function LoginPage({
   providers,
@@ -24,8 +24,7 @@ function LoginPage({
       <Image
         style={{ marginBottom: 25 }}
         src={logoSpotify}
-        width={208}
-        height={208}
+        height={70}
         alt="Spotify logo"
       />
 

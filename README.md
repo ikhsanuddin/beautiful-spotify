@@ -2,8 +2,8 @@
 Desktop                                                                                |  Mobile
 :-------------------------------------------------------------------------------------:|:-----------------------------:
 <img alt="screenshot-desktop" height=315 src="public/desktop-screenshoot.png" />  |  <img alt="screenshot-mobile" height=320 src="public/mobile-screenshoot.png" />
-&nbsp;
 
+&nbsp;
 ## Highlight ✨
 - Next.Js 13
 - NextAuth v4
