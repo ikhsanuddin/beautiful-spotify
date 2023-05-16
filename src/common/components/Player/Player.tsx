@@ -18,7 +18,7 @@ const Player = () => {
     <div className={styles.player}>
       <div className={styles.player__album}>
         <span />
-        <p>Nothing's playing</p>
+        <p>Nothing&#39;s playing</p>
       </div>
       <div className={styles.player__controls}>
         <FontAwesomeIcon icon={faStepBackward as IconProp} />
